@@ -1,8 +1,11 @@
 import re
 import os
 from os import environ, getenv
-from Script import script
 
+from dotenv import load_dotenv
+load_dotenv()
+
+from Script import script
 id_pattern = re.compile(r'^.\d+$')
 
 def is_enabled(value, default):
@@ -53,7 +56,7 @@ DB_CHANGE_LIMIT = int(environ.get('DB_CHANGE_LIMIT', "432"))
 
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/SparkX_MRTech')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/SparkX_MR_Tech')
-OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/MR_TechRobot')
+OWNER_LNK = environ.get('OWNER_LNK', 'ttps://t.me/MR_TechRobot')
 UPDATE_CHANNEL_LNK = environ.get('UPDATE_CHANNEL_LNK', 'https://t.me/Movie_Flix_SMS')
 
 AUTH_CHANNEL = environ.get("AUTH_CHANNEL", "-1003786228829") # add multiple channels here, separated by single space
@@ -84,7 +87,7 @@ MOVIE_UPDATE_NOTIFICATION = bool(environ.get("MOVIE_UPDATE_NOTIFICATION", True))
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", True))
 MAX_B_TN = environ.get("MAX_B_TN", "8")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
-PORT = environ.get("PORT", "8089")
+PORT = environ.get("PORT", "8080")
 MSG_ALRT = environ.get('MSG_ALRT', 'Share & Support Us ♥️ Spark X - MR Tech')
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/SparkX_MRTech') 
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
@@ -101,7 +104,7 @@ LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False")
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = int(environ.get("MAX_LIST_ELM") or 10) or None # Maximum number of elements in a list (default: 10, set 0 for no limit)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1003358666263 -1003811927378')).split()]
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1003358666263')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "False")), False)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), True)
 PM_SEARCH = bool(environ.get('PM_SEARCH', True)) 
@@ -138,7 +141,6 @@ QUALITIES = ["360P", "", "480P", "", "560P", "", "720P", "", "1080P", "", "1440P
 SEASONS = ["Season 1", "S01", "Season 2", "S02", "Season 3", "S03", "Season 4", "S04", "Season 5", "S05", "Season 6", "S06", "Season 7", "S07", "Season 8", "S08", "Season 9", "S09", "Season 10", "S10"]
 
 
-PORT = int(environ.get("PORT", "8080"))
 NO_PORT = bool(environ.get('NO_PORT', False))
 APP_NAME = None
 if 'DYNO' in environ:
