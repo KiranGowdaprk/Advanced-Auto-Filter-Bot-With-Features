@@ -96,7 +96,7 @@ async def start(client, message):
         k = await message.reply("<b>📥 Fetching your files... Please wait.</b>")
         sent_messages = []
 
-        btn = [[InlineKeyboardButton("Update Channel ↗️", url=UPDATE_CHANNEL_LNK)]]
+        btn = [[InlineKeyboardButton("𝖴𝗉𝖽𝖺𝗍𝖾 𝖢𝗁𝖺𝗇𝗇𝖾𝗅", url=UPDATE_CHANNEL_LNK)]]
         reply_markup = InlineKeyboardMarkup(btn)
 
         for file in file_data:
@@ -128,7 +128,7 @@ async def start(client, message):
                     )
                 except Exception:
                     # Safe fallback just in case formatting fails
-                    formatted_caption = f"<b>{file_name}</b>\n\n📤 ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ: <a href=\"https://t.me/SilentXBotz\">SɪʟᴇɴᴛXʙᴏᴛᴢ</a>"
+                    formatted_caption = f"<b>{file_name}</b>\n\n📤 ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ: <a href=\"https://t.me/MR_Tech_Officiall\">MR Tech Bot | Spark X</a>"
                 
                 # 4. Copy the message and OVERWRITE the caption with your formatted one!
                 copied_msg = await client.copy_message(
@@ -153,9 +153,7 @@ async def start(client, message):
             delete_mins = 5
             
         warning_text = (
-            "<b><u>❗️ ❗️ ❗️ IMPORTANT ❗️ ❗️ ❗️</u>\n\n"
-            f"THIS MOVIE FILE/VIDEO WILL BE DELETED IN {delete_mins} MINUTE 😐 (DUE TO COPYRIGHT ISSUES).\n\n"
-            "PLEASE FORWARD THIS FILE TO SOMEWHERE ELSE AND START DOWNLOADING THERE</b>"
+            f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nᴛʜɪꜱ ᴍᴏᴠɪᴇ ꜰɪʟᴇ/ᴠɪᴅᴇᴏ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ɪɴ <b><u>{delete_mins} ᴍɪɴᴜᴛᴇ</u> 🫥 <i></b>(ᴅᴜᴇ ᴛᴏ ᴄᴏᴘʏʀɪɢʜᴛ ɪꜱꜱᴜᴇꜱ)</i>.\n\n<b><i>ᴘʟᴇᴀꜱᴇ ꜰᴏʀᴡᴀʀᴅ ᴛʜɪꜱ ꜰɪʟᴇ ᴛᴏ ꜱᴏᴍᴇᴡʜᴇʀᴇ ᴇʟꜱᴇ ᴀɴᴅ ꜱᴛᴀʀᴛ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴛʜᴇʀᴇ</i></b>"
         )
         warning_msg = await message.reply(warning_text)
         
@@ -167,7 +165,7 @@ async def start(client, message):
             await asyncio.sleep(delay)
             try:
                 await client.delete_messages(chat_id, message_ids)
-                await client.send_message(chat_id, "<b>YOUR VIDEO / FILE IS SUCCESSFULLY DELETED ‼️</b>")
+                await client.send_message(chat_id, "<b>ʏᴏᴜʀ ᴠɪᴅᴇᴏ / ꜰɪʟᴇ ɪꜱ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ !!</b>")
             except Exception:
                 pass
 
