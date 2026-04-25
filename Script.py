@@ -243,8 +243,11 @@ class script(object):
 
 ᴍᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     
-    CAPTION = """<b>{file_name}\n
-📤 ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ: <a href="https://t.me/SilentXBotz">SɪʟᴇɴᴛXʙᴏᴛᴢ</a></b>"""
+    CAPTION = """<b>‣ ɴᴀᴍᴇ : </b><i>{file_name}</i>
+
+<b>‣ ꜱɪᴢᴇ : </b>{file_size}
+
+<b>🍁 ʙʏ : <a href="https://t.me/MR_Tech_Officiall">[ MR Tech Bot | Spark X ]</a></b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>🎬 ᴛɪᴛʟᴇ: <a href={url}>{title}</a>
@@ -300,7 +303,11 @@ class script(object):
 • /remove_premium - <code>ʀᴇᴍᴏᴠᴇ ᴘʀᴇᴍɪᴜᴍ</code>
 • /premium_users - <code>ʟɪꜱᴛ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀꜱ</code>
 • /get_premium - <code>ᴄʜᴇᴄᴋ ᴘʀᴇᴍɪᴜᴍ ɪɴꜰᴏ</code>
-• /restart - <code>ʀᴇꜱᴛᴀʀᴛ ʙᴏᴛ</code></b>"""
+• /restart - <code>ʀᴇꜱᴛᴀʀᴛ ʙᴏᴛ</code>
+• /link - <code>ɢᴇɴᴇʀᴀᴛᴇ ꜱɪɴɢʟᴇ ꜰɪʟᴇ ʟɪɴᴋ</code>
+• /batch - <code>ɢᴇɴᴇʀᴀᴛᴇ ʙᴀᴛᴄʜ ꜰɪʟᴇ ʟɪɴᴋ</code>
+• /linkslist - <code>ᴠɪᴇᴡ ᴀʟʟ ᴀᴄᴛɪᴠᴇ ʟɪɴᴋꜱ</code>
+• /revoke - <code>ᴅᴇʟᴇᴛᴇ ᴀ ꜱᴛᴏʀᴇ ʟɪɴᴋ</code></b>"""
 
     GROUP_CMD = """<b>👥 ɢʀᴏᴜᴘ ᴄᴏᴍᴍᴀɴᴅꜱ:
 
@@ -319,6 +326,23 @@ class script(object):
 • /remove_fsub - <code>ʀᴇᴍᴏᴠᴇ ꜰᴏʀᴄᴇ ꜱᴜʙ</code>
 • /reset_group - <code>ʀᴇꜱᴇᴛ ꜱᴇᴛᴛɪɴɢꜱ</code>
 • /details - <code>ᴄʜᴇᴄᴋ ꜱᴇᴛᴛɪɴɢꜱ</code></b>"""
+
+    USER_CMD = """<b>👤 ᴜꜱᴇʀ ᴄᴏᴍᴍᴀɴᴅꜱ:
+
+• /start - <code>ꜱᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ</code>
+• /myplan - <code>ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴ ꜱᴛᴀᴛᴜꜱ</code>
+• /plan - <code>ᴠɪᴇᴡ ᴀᴠᴀɪʟᴀʙʟᴇ ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴꜱ</code>
+• /redeem - <code>ʀᴇᴅᴇᴇᴍ ᴀ ᴘʀᴇᴍɪᴜᴍ ᴄᴏᴅᴇ</code>
+• /alive - <code>ᴄʜᴇᴄᴋ ɪꜰ ᴛʜᴇ ʙᴏᴛ ɪꜱ ᴀᴄᴛɪᴠᴇ</code>
+• /ping - <code>ᴄʜᴇᴄᴋ ʙᴏᴛ ʟᴀᴛᴇɴᴄʏ</code>
+• /system - <code>ᴠɪᴇᴡ ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛɪꜱᴛɪᴄꜱ</code>
+• /top_search - <code>ᴠɪᴇᴡ ᴛᴏᴘ ꜱᴇᴀʀᴄʜᴇᴅ ǫᴜᴇʀɪᴇꜱ</code>
+• /trendlist - <code>ᴠɪᴇᴡ ᴛʀᴇɴᴅɪɴɢ ꜱᴇᴀʀᴄʜ ʟɪꜱᴛ</code>
+• /movies - <code>ʟɪꜱᴛ ʀᴇᴄᴇɴᴛ ᴍᴏᴠɪᴇꜱ</code>
+• /series - <code>ʟɪꜱᴛ ʀᴇᴄᴇɴᴛ ꜱᴇʀɪᴇꜱ</code>
+• /id - <code>ɢᴇᴛ ʏᴏᴜʀ ᴜꜱᴇʀ ɪᴅ ᴏʀ ᴄʜᴀᴛ ɪᴅ</code>
+• /info - <code>ɢᴇᴛ ᴅᴇᴛᴀɪʟᴇᴅ ᴜꜱᴇʀ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ</code></b>"""
+
 
     PAGE_TXT = """ᴡʜʏ ᴀʀᴇ ʏᴏᴜ ꜱᴏ ᴄᴜʀɪᴏᴜꜱ ⁉️"""    
    
